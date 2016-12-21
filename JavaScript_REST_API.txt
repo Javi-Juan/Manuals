@@ -1,0 +1,96 @@
+<------------------------------------------------------->
+<-- Usaremos la API RESTful de Gilt Groupe para jugar!-->
+<------------------------------------------------------->
+
+
+No REST for the Wicked
+----------------------
+In fact, this client/server relationship is a prerequisite of a set of principles called REST 
+(or Representational State Transfer). This sounds kind of scary, but it's super easy—let's walk through it together.
+
+Remember how we said HTTP involves sending hypertext (text with links)? Whenever you navigate through a site by 
+clicking links, you're making a state transition, which brings you to the next page (representing the next state 
+of the application). That's it!
+
+By following this simple model of clicking from page to page, you're starting to follow REST principles. 
+When something follows REST principles, we say that thing is RESTful. We'll cover these principles in the next 
+exercise.
+
+
+A RESTful API
+-------------
+An API, or application programming interface, is kind of like a coding contract: it specifies the ways 
+a program can interact with an application. For example, if you want to write a program that reads and 
+analyzes data from Twitter, you'd need to use the Twitter API, which would specify the process for authentication,
+ important URLs, classes, methods, and so on.
+
+For an API or web service to be RESTful, it must do the following:
+
+    Separate the client from the server
+
+    Not hold state between requests (meaning that all the information necessary to respond to a request 
+     is available in each individual request; no data, or state, is held by the server from request to request)
+
+    Use HTTP and HTTP methods (as explained in the next section).
+
+There are some other requirements, but they're beyond the scope of this lesson.
+
+
+Making a Request
+-----------------
+On line 1, we've created the xhr variable, which stands for XML HTTP Request. This is how we make an HTTP request!
+On line 2, we make the actual request to Codecademy.com.
+On line 3  we send the command and then we see the result.
+
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://www.codecademy.com/", false);
+xhr.send();
+
+console.log(xhr.status); --> Devuelve 200, código html que dice que está todo OK
+console.log(xhr.statusText); --> Devuelve OK
+
+
+The Four Verbs
+---------------
+The number of HTTP methods you'll use is quite small—there are just four HTTP "verbs" you'll need to know! They are:
+
+    GET: retrieves information from the specified source (you just saw this one!)
+    POST: sends new information to the specified source.
+    PUT: updates existing information of the specified source.
+    DELETE: removes existing information from the specified source.
+
+So when we sent our GET request to codecademy.com, we retrieved information. When you add to or update your blog, 
+you're sending POST or PUT requests; when you delete a tweet, there goes a DELETE request.
+
+
+Anatomy of a Request
+---------------------
+An HTTP request is made up of three parts:
+
+    The request line, which tells the server what kind of request is being sent (GET, POST, etc.) and what resource it's looking for;
+    The header, which sends the server additional information (such as which client is making the request)
+    The body, which can be empty (as in a GET request) or contain data (if you're POSTing or PUTing information, that information is contained here).
+
+
+Endpoints
+---------
+Endpoints are API-defined locations where particular data are stored. Just as you'll GET a pair of pants from 
+PantsWorld or you'll GET a bag of peanuts from PeanutHut, you'll GET something different depending on the endpoint you use.
+
+For instance, if you're using the API for a video hosting service, there might be endpoints for the most 
+popular videos, the most recent videos, or videos belonging to a certain genre or category.
+
+
+Authentication & API Keys
+-------------------------
+Many APIs require an API key. Just as a real-world key allows you to access something, an API key grants you access to a particular API. 
+Moreover, an API key identifies you to the API, which helps the API provider keep track of how their service is used and prevent 
+unauthorized or malicious activity.
+
+Some APIs require authentication using a protocol called OAuth. We won't get into the details, but if you've ever been redirected to 
+a page asking for permission to link an application with your account, you've probably used OAuth.
+
+API keys are often long alphanumeric strings. 
+
+Example
+	var apiKey = "FtHwuH8w1RDjQpOr0y0gF3AWm8sRsRzncK3hHh9";

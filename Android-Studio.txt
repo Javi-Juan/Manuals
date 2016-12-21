@@ -1,0 +1,42 @@
+TextView
+--------
+
+  <TextView
+    android:text="Happy Birthday!"-------------------------------> Texto que queremos visualizar
+    android:background="@android:color/darker_gray" -------------> Color del fondo (2)
+    android:textColor="#EEEEE" ----------------------------------> Color del Texto. Puedes utilizar color en hex (2)
+    android:layout_width="wrap_content"--------------------------> La anchura es automática
+    android:layout_height="wrap_content"-------------------------> La altura es automática
+    android:textSize:"36sp" -------------------------------------> Para valores fijos, seguir recomendaciones google (1)
+    android:textAppearance="?android:textAppearanceMedium" ------> Para valores del sistema pueden ser:
+                                                                      • ?android:textAppearanceSmall is currently 14sp
+                                                                      • ?android:textAppearanceMedium is currently 18sp
+                                                                      • ?android:textAppearanceLarge is currently 22sp
+   />
+
+
+ImageView
+---------
+  <ImageView
+    android:src="@drawable/cake" --------------------------------> Ruta del archivo, no se pone la extensión
+    android:layout_width="wrap_content" -------------------------> Anchura fija o automática
+    android:layout_height="wrap_content" ------------------------> Anchura fija o automática
+    android:scaleType="center" ----------------------------------> Tipo de escalado de la imagen, en éste caso lo centra pero no lo escala
+                                                                   "centerCrop" ajusta la imagen al tamaño.
+   />
+
+
+
+
+Links:
+------
+
+(1) - http://www.google.com/design/spec/style/typography.html#typography-styles
+(2) - http://www.google.com/design/spec/style/color.html#color-color-palette
+
+
+https://material.google.com/
+developer.android.com/index.html
+https://developers.google.com/android/for-all/vocab-words/
+http://labs.udacity.com/android-visualizer/
+https://developers.google.com/android/for-all/vocab-words/?utm_source=udacity&utm_medium=course&utm_campaign=android_basics

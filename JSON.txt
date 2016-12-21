@@ -1,0 +1,13 @@
+var factura = {
+	empresa:[
+		{nombre:"nombre"},
+		{direccion: "direccion"},
+		{telefono: "telefono"},
+		{nif:"nif"}],
+	cliente:[
+		{nombre:"nombre"},
+		{direccion: "direccion"},
+		{telefono: "telefono"},
+		{nif:"nif"}],
+	productos:[{
+			]

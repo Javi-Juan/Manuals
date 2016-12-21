@@ -1,0 +1,538 @@
+---------------------------------------------------------------------------------------------------------------------------------------------
+Imagenes y linkss
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Table Time</title>
+	</head>
+	<body>
+		<h1 style = "font-family:Arial">Tables Are Mega Sweet</h1>
+		<a><img src="http://i0.wp.com/www.tierraquebrada.com/wp-content/uploads/trisquel.jpg?resize=183%2C175"/></a>
+		<a href="http://www.hiru.eus/cultura-vasca/el-lauburu">
+		    <img src="http://i1.wp.com/www.tierraquebrada.com/wp-content/uploads/lauburu.jpg?resize=183%2C175">
+		</a>
+		
+		
+	</body>
+</html>
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+Listas
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Kingest of Kongs</title>
+	</head>
+	<body>
+		<img src="https://s3.amazonaws.com/codecademy-blog/assets/da840950.jpg" />
+		<p>I'm male, 89 years old, and am a giant, Empire State Building-climbing ape.</p>
+		<ul>
+			<li><p style="color:red">Interests</p>
+				<ul>
+					<li style="font-family:Futura">Bananas</li>
+					<li style="font-family:Futura">Climbing stuff</li>
+					<li style="font-family:Futura">HTML</li>
+				</ul>
+                        </li>
+			<li><p style="color:red">Jobs</p>
+				<ol>
+					<li style="font-family:Futura">Giant ape</li>
+					<li style="font-family:Futura">Web developer</li>
+				</ol>
+                        </li>
+			<li><p style="color:red">Where I Went to School</p>
+				<ol>
+					<li style="font-family:Futura">Diddy Kong Jr. High School</li>
+					<li style="font-family:Futura">Donkey Kong Sr. High School</li>
+					<li style="font-family:Futura">Harvard University (BA)</li>
+					<li style="font-size:18px; font-family:Futura">Yale University (JD) (Current)</li>
+				</ol>
+                        </li>
+			<li><p style="color:red">Favorite Quotes</p>
+				<ul>
+					<li style="font-family:Futura">"If at first you don't succeed, climb a giant building."</li>
+					<li style="font-family:Futura">"A banana in the hand is worth two on the tree."</li>
+				</ul>
+                        </li>
+		</ul>
+	</body>
+</html>
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+Tablas
+---------------------------------------------------------------------------------------------------------------------------------------------
+<html>
+    <head>
+        <title>Table Time</title>
+    </head>
+    
+    <body>
+        
+        <table style="border-collapse:collapse;">
+            <thead>
+                <tr style "color:red;">
+                    <th colspan="2" style="color:red">Famous Monsters by Birth Year</th>
+                </tr>
+                <tr style="border-bottom:1px solid black;">
+                    <th style="padding:5px;font-style:italic">Famous Monster</th>
+                    <th style="padding:5px;border-left:1px solid black;font-style:italic">Birth Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding:5px;">King Kong</td>
+                    <td style="padding:5px;border-left:1px solid black;">1933</td>     
+                </tr>
+                
+                <tr>
+                    <td style="padding:5px;">Dracula</td>
+                    <td style="padding:5px;border-left:1px solid black;">1897</td>
+                </tr>
+                
+                <tr>
+                    <td style="padding:5px;">Bride of Frankenstein</td>
+                    <td style="padding:5px;border-left:1px solid black;">1944</td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </body>
+
+</html>
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+Div y Span
+---------------------------------------------------------------------------------------------------------------------------------------------
+Span -> contenedor de elementos en linea, todo entra en una misma linea
+Div  -> contenedor de elementos en bloque 
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Result</title>
+	</head>
+	<body>
+		<div style="width:50px; height:50px; background-color:red"></div>
+		<div style="width:50px; height:50px; background-color:blue"></div>
+		<div style="width:50px; height:50px; background-color:green"></div>
+		<div style="width:50px; height:50px; background-color:yellow"></div>
+
+                <p>This text is black, except for the <span style="color:red; font-family:Impact">word</span> red!</p>
+		
+	</body>
+</html>
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+Ejemplo de tabla con fotos linkadas a web
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css" />
+		<title>My Photo Page</title>
+	</head>
+	<body>
+	    <table>
+	        <thead>
+	            <th colspan="3">Afotos</th>
+	        </thead>
+	        <tbody>
+	            <tr>
+	                <td><a href="www.google.es"><img src="http://www.japanese-name-translation.com/site/kanji/dragon.gif"/></td></a>
+	                <td><a href="www.google.es"><img src="http://www.japanese-name-translation.com/site/kanji/love.gif"/></td></a>
+	                <td><a href="www.google.es"><img src="http://www.japanese-name-translation.com/site/kanji/strength.gif"/></td></a>
+	            </tr>
+	            <tr>
+	                <td><a href="www.google.es"><img src="http://www.japanese-name-translation.com/site/kanji/happiness.gif"/></td></a>
+	                <td><a href="www.google.es"><img src="http://www.japanese-name-translation.com/site/kanji/friendship.gif"/></td></a>
+	                <td><a href="www.google.es"><img src="http://www.japanese-name-translation.com/site/kanji/fire.gif"/></td></a>
+	            </tr>
+	            <tr>
+	            	 <td><a href="www.google.es"><img src="http://www.japanese-name-translation.com/site/kanji/strength.gif"/></td></a>
+	                <td><a href="www.google.es"><img src="http://www.japanese-name-translation.com/site/kanji/love.gif"/></td></a>
+	                <td><a href="www.google.es"><img src="http://www.japanese-name-translation.com/site/kanji/dragon.gif"/></td></a>
+	            </tr>
+	        </tbody>
+	    </table>
+	</body>
+</html>
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+Ejemplo HTML con CSS todo lo que sea 
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			p {
+				color: purple;
+			}
+		</style>
+		<title>Result</title>
+	</head>
+	<body>
+		<p>Check it out! I'm purple!</p>
+	</body>
+</html>
+
+--------------------
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+		<title>Even Fancier Fonts</title>
+	</head>
+	<body>
+		<p>Much of this is regular text, but some of it is <span>fancy</span>!
+		We can use our <span>newly fancified font</span> to add some
+		<span>flair</span> to our website. It'd be a <span>royal pain</span> 
+		to make each of these span tags <span>fancy</span> individually,
+		but it's a cinch with <span>CSS</span>!</p>
+	</body>
+</html>
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+Ejemplo de CSS
+---------------------------------------------------------------------------------------------------------------------------------------------
+h3{
+    color:red;
+}
+p{
+    font-family:Courier;
+    font-size: 16px;
+}
+span{
+    background-color:yellow;
+}
+
+Parametro em
+------------
+The font-size unit em is a relative measure: one em is equal to the default font size on 
+whatever screen the user is using. That makes it great for smartphone screens, since it 
+doesn't try to tell the smartphone exactly how big to make a font: it just says, 
+"Hey, 1em is the font size that you normally use, so 2em is twice as big and 0.5em is half that size!"
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Result</title>
+	</head>
+	<body>
+		<p style="font-size: 1em">One em!</p>
+		<p style="font-size: 0.5em">Half an em!</p>
+		<p style="font-size: 2em">TWO EM!</p>
+	</body>
+</html>
+
+fuentes en CSS
+--------------
+
+
+You don't have to jump straight to a default value like cursive or sans-serif: you can tell CSS to try several, 
+going from one to the next if the one you want isn't available.
+
+p {
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+Bordes en css
+-------------
+
+td{
+    height:50;
+    border: 1px dashed blue;
+}
+table{
+    border: 1px solid black;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+
+Div
+----
+Cambiando los parametros de div podemos generar botones:
+
+div {
+    height: 50px;
+    width: 120px;
+    border-color: #6495ED;
+    background-color: #BCD2EE;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    margin: auto;
+    text-align: center;
+}
+}
+
+
+
+Multiple Selectors
+-------------------
+
+As you've seen, it's possible to nest HTML elements inside one another, like so:
+
+<div>
+    <div>
+        <p>I like tacos!</p>
+
+So what if you want to grab <p>s that are inside two <div>s, and not all <p>s?
+
+You select those in the CSS tab like this:
+
+div div p {
+    /*CSS stuff!*/
+}
+
+
+One selector to rule them all
+-----------------------------
+
+There's also a very special selector you can use to apply CSS styling to every element on the page:
+the * selector. For example, if you type
+
+* {
+    border: 2px solid black;
+}
+
+You'll create a two-pixel wide solid black border around every element on the HTML page.
+
+
+Branching
+---------
+
+You can think of an HTML document as a tree: elements "branch out" from the main trunk (the <html></html> tags). 
+The first two big branches are <head> and <body>, and branches multiply and become finer as you get to elements 
+like <div>s, <table>s, and text (headers and paragraphs).
+
+Classes y IDs
+-------------
+Classes are useful when you have a bunch of elements that should all receive the same styling. 
+Rather than applying the same rules to several selectors, you can simply apply the same class 
+to all those HTML elements, then define the styling for that class in the CSS tab.
+Classes are assigned to HTML elements with the word class and an equals sign, like so:
+
+<div class="square"></div>
+<img class="square"/>
+<td class="square"></td>
+Classes are identified in CSS with a dot (.), like so:
+
+.square {
+    height: 100px;
+    width: 100px;
+}
+
+
+IDs, on the other hand, are great for when you have exactly one element that should receive a certain 
+kind of styling.
+
+IDs are assigned to HTML elements with the word id and an equals sign:
+
+<div id="first"></div>
+<div id="second"></div>
+<p id="intro"></p>
+
+IDs are identified in CSS with a pound sign (#):
+
+#first {
+    height: 50px;
+}
+
+#second {
+    height: 100px;
+}
+
+#intro {
+    color: #FF0000;
+}
+
+This allows you to apply style to a single instance of a selector, rather than all instances.
+
+
+pseudo-class selector
+---------------------
+
+A pseudo-class selector is a way of accessing HTML items that aren't part of the document tree 
+For instance, it's very easy to see where a link is in the tree. But where would you find information 
+about whether a link had been clicked on or not? It isn't there!
+
+Pseudo-class selectors let us style these kinds of changes in our HTML document. 
+For example, we saw we could change a link's text-decoration property to make it something other 
+than blue and underlined. Using pseudo selectors, you can control the appearance of unvisited and visited 
+links—even links the user is hovering over but hasn't clicked!
+
+The CSS syntax for pseudo selectors is
+
+	selector:pseudo-class_selector {
+    	property: value;
+	}
+
+It's just that little extra colon (:).
+
+
+There are a number of useful pseudo-class selectors for links, including:
+
+a:link: An unvisited link.
+a:visited: A visited link.
+a:hover: A link you're hovering your mouse over.
+
+
+first-child. 
+------------
+
+It's used to apply styling to only the elements that are the first children of their parents. For instance:
+
+p:first-child {
+    color: red;
+}
+
+Would make all paragraphs that are the first children of their parent elements red.
+
+
+nth-child
+---------
+
+You can actually select any child of an element after the first child with the pseudo-class selector 
+nth-child; you just add the child's number in parentheses after the pseudo-class selector. For example,
+
+p:nth-child(2) {
+    color: red;
+}
+
+Would turn every paragraph that is the second child of its parent element red.
+
+The element that is the child goes before :nth-child; its parent element is the element that contains it
+
+
+
+ejemplo:
+p:first-child{
+    font-family:cursive;
+}
+p:nth-child(2){
+    font-family:Tahoma;
+}
+p:nth-child(3){
+    color:#CC0000;
+}
+p:nth-child(4){
+    background-color: #00FF00;
+}
+p:nth-child(5){
+    font-size: 22px;
+}
+
+
+Positioning
+-----------
+
+We can change the first positioning with the display property. 
+Values.
+
+block: This makes the element a block box. It won't let anything sit next to it on the page! 
+       It takes up the full width.
+
+inline-block: This makes the element a block box, but will allow other elements to sit next 
+              to it on the same line.
+
+inline: This makes the element sit on the same line as another element, but without formatting 
+        it like a block. It only takes up as much width as it needs (not the whole line).
+
+none: This makes the element and its content disappear from the page entirely
+
+
+
+Margin, Border, Padding, Content
+--------------------------------
+The margin is the space around the element. The larger the margin, the more space between our element and the 
+elements around it. We can adjust the margin to move our HTML elements closer to or farther from each other.
+
+The border is the edge of the element. It's what we've been making visible every time we set the border property.
+
+The padding is the spacing between the content and the border. We can adjust this value with CSS to move the 
+border closer to or farther from the content.
+
+The content is the actual "stuff" in the box. If we're talking about a <p> element, the "stuff" 
+is the text of the paragraph.
+
+You'll see abbreviations like TM, TB, and TP in the diagram. 
+These stand for "top margin," "top border," and "top padding." As we'll see, we can adjust the top, right, left, 
+and bottom padding, border, and margin individually.
+
+
+margin: auto -> his tells the document to automatically put equal left and right margins on our element
+margin-top: /*some value*/
+margin-right: /*some value*/
+margin-bottom: /*some value*/
+margin-left: /*some-value*/
+
+You can also set an element's margins all at once: you just start from the top margin and go around clockwise 
+(going from top to right to bottom to left). 
+For instance,
+
+		margin: 1px 2px 3px 4px;
+
+will set a top margin of 1 pixel, a right margin of 2, a bottom of 3, and a left of 4.
+
+
+padding-top: /*some value*/
+padding-right: /*some value*/
+padding-bottom: /*some value*/
+padding-left: /*some-value*/
+
+Or select them all in one declaration, like this:
+
+padding: value value value value;
+
+Float
+-----
+
+When you float an element on the page, you're telling the webpage: "I'm about to tell you where to put this element, 
+but you have to put it into the flow of other elements." This means that if you have several elements all floating, 
+they all know the others are there and don't land on top of each other
+
+float: right; -> move to the right
+float: left; -> move to left
+
+Clear
+-----
+If you tell an element to clear: left, it will immediately move below any floating elements on the left side of the page; 
+it can also clear elements on the right. If you tell it to clear: both, it will get out of the way of elements floating 
+on the left and right!
+
+
+The syntax is what you're used to:
+
+element {
+    clear: /*right, left, or both*/
+}
+
+Position
+--------
+When an element is set to position: absolute, it's then positioned in relation to the first parent element it has that 
+doesn't have position: static. If there's no such element, the element with position: absolute gets positioned 
+relative to <html>.
+
+position: absolute; -> Se posiciona dentro y en  relación al elemento al que pertenece
+position: relative; -> Se posiciona en relación al elemento al que pertenece pero no queda dentro de el
+position: fixed; -> deja fijo el elemento, si haces scroll siempre se queda ahí
+
+
+Z-Index
+-------
+
+You can think of the z-index as a measure of importance: the higher an element's z-index, the higher it will be "stacked" 
+on the page. Giving your header a z-index of 1 while not giving any of the other elements a z-index ensures that your header 
+will sit "on top of" your other elements and won't get stuck behind them.

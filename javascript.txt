@@ -1,0 +1,794 @@
+"string"
+
+length
+------
+To discover the length of a string write the string within quotes. 
+Then write a period (full stop) and the word length like this: "yourName".length----
+
+math
+----
+
+1. ( ): control order of operations
+2. * and /: multiplication and division
+3. - and +: subtraction and addition
+4. % remainder
+
+i++  (suma de 1 en 1)
+i--  (resta de 1 en 1) 
+i+=5 (suma de 5 en 5)
+i-=5 (resta de 5 en 5)
+
+Examples:
+
+1. 100/10 evaluates to 10
+2. "Jane".length + 5 evaluates to 9
+3. 5*(3+1) evaluates to 20
+4. console.log(11%3) evaluates to 2
+
+// Coments
+-------
+// para comentar frases
+
+
+confirm
+-------
+These command can be used on websites to confirm things with users ej:
+
+	confirm("I am ready to go.");
+
+prompt
+------
+Use the prompt command to ask the user information ej:
+
+	prompt("What is your name?");
+	prompt("What is Ubuntu?");
+
+alert
+-----
+show the text with a "accept" button
+	alert("alertaaa");
+
+console.log
+-----------
+ou may have noticed that the interpreter doesn't print out every single thing it does. So if we want to know what it's thinking, we sometimes have to ask it to speak to us.
+
+console.log() will take whatever is inside the parentheses and log it to the console below your code—that's why it's called console.log()!
+
+This is commonly called printing out.
+
+console.log("Great to see you," + " " + name);
+
+data types
+-----------
+    strings (e.g. "dogs go woof!")
+    numbers (e.g. 4, 10)
+    booleans (e.g. false, 5 > 4)
+
+
+Comparison Operators
+--------------------
+    > Greater than
+    < Less than
+    <= Less than or equal to
+    >= Greater than or equal to
+    === Equal to
+    !== Not equal to
+
+substring
+---------
+"hello". substring(0, 2);  --> he
+
+show starting from position 0 to position 2  
+
+ 0 1 2 3 4
+ | | | | | 
+ h e l l o
+
+a. "Jan" in "January"
+b. "Melbourne is" in "Melbourne is great" (note the space!)
+c. "burgers" in "Hamburgers"
+
+console.log("January".substring(0,3));
+console.log("Melbourne is great".substring(0,12));
+console.log("Hamburgers".substring(3,10))
+
+Variables
+---------
+a. var myName = Javi";
+b. var myAge = 30;
+c. var isOdd = true;
+
+If/Else
+-------
+if ("Irati".length === 5)
+{
+    console.log("I finished my first course");
+}
+else
+{
+    console.log("tralari");
+}
+
+
+if (choice1 === choice2){
+        return "The result is a tie!";
+    } else if (choice1 === "rock"){
+        if (choice2 === "scissors"){
+            return "rock wins";
+        } else {
+            return "paper wins";
+        }
+    }
+
+Switch
+------
+
+var lunch = prompt("What do you want for lunch?","Type your lunch choice here");
+
+switch(lunch){
+  case 'sandwich':
+    console.log("Sure thing! One sandwich, coming up.");
+    break;
+  case 'soup':
+    console.log("Got it! Tomato's my favorite.");
+    break;
+  case 'salad':
+    console.log("Sounds good! How about a caesar salad?");
+    break;
+  case 'pie':
+    console.log("Pie's not a meal!");
+    break;
+  default:
+    console.log("Huh! I'm not sure what " + lunch + " is. How does a sandwich sound?");
+}
+
+
+For
+---
+for (var counter = 1; counter < 11; counter++) { = 
+	console.log(counter);
+}
+
+
+While
+-----
+var understand = true;
+
+while( understand ){
+	console.log("I'm learning while loops!");
+	understand = false;
+}
+
+
+do while
+--------
+var loopCondition = false;
+
+do {
+	console.log("I'm gonna stop looping 'cause my condition is " + loopCondition + "!");	
+} while (loopCondition);
+
+Funciones
+---------
+var functionName = function( ) {
+    // code code code
+    // code code code
+    // (more lines of code)
+};
+
+
+
+// Funcion que no devuelve:
+
+var divideByThree = function (number) {
+    var val = number / 3;
+    console.log(val);
+};
+
+// The computer then runs the code inside the function!
+divideByThree(6);
+
+// Función que devuelve datos
+
+/ Parameter is a number, and we do math with that parameter
+var timesTwo = function(number) {
+    return number * 2;
+};
+
+// Call timesTwo here!
+var newNumber = timesTwo(7);
+console.log(newNumber);
+
+
+//Función con 2 parámetros de entrada
+var perimeterBox = function (length, width){
+    return (length*2 + width*2);
+};
+console.log(perimeterBox(25,3));
+
+
+Random
+------
+variable = Math.random();
+
+var damageThisRound = Math.floor(Math.random() * 5 + 1);
+
+First we use Math.random() to create a random number from 0 up to 1. For example, 0.5
+Then we multiply by 5 to make the random number from 0 up to 5. For example, 0.5 * 5 = 2.5
+Next we use Math.floor() to round down to a whole number. For example, Math.floor( 2.5 ) = 2
+Finally we add 1 to change the range from between 0 and 4 to between 1 and 5 (up to and including 5)
+
+
+Array
+-----
+var junk = ["yo","tu",1,2];
+
+junk[0] ----> contiene "yo"
+junk[1] ----> contiene "tu"
+junk[2] ----> contiene 1
+junk[2] ----> contiene 2
+
+
+var cities = ["Melbourne", "Amman", "Helsinki", "NYC", "Mars", "Moon", "Pluto"];
+
+for (var i = 0; i < cities.length; i++) {
+    console.log("I would like to visit " + cities[i]);
+}
+
+junk.length -> nos dirá el número de elementos del array
+
+
+Array de 3x3, los arrays pueden ser de diferentes tipos de datos
+var multiarray = [[1,2,3],["bat","bi","hiru"],["uno","dos","tres"]]
+
+Jagged Array
+------------
+Arrays que no son de columnas y filas iguales. Puedes tener una fila de 3 elementos, 
+la siguiente de 2 y la siguiente de 4...
+
+var jagged = [[1,2,3],[4,5],[6,7,8,9]];
+
+
+hits.push
+---------
+Use the .push() method that adds the thing between parentheses to the end of the array. 
+
+For example,
+newArray = [];
+newArray.push('hello');
+newArray[0];   // equals 'hello'
+
+isNan
+-----
+If you call isNaN on something, it checks to see if that thing is not a number. So:
+
+isNaN('berry'); // => true
+
+isNaN(NaN); // => true
+isNaN(undefined); // => true
+isNaN(42);  // => false
+
+EQUAL AND OR NOT
+----------------
+EQUAL - if (user=="BEA" == comercial)
+AND - if (user=="BEA" && comercial)
+OR - if (user=="BEA" || comercial)
+NOT - if (user!"BEA")
+
+
+Objetos 
+-------
+
+Se pueden crear objetos de dos maneras:
+
+object literal notation: usamos el = y los {}; con las variables definidas y con datos dentro
+
+var myObject = {
+    key: value,
+    key: value,
+    key: value
+};
+
+object constructor: Creamos un objeto pero vacio, sin datos
+
+var mio = new Object();
+
+Ejemplo literal notation:
+
+var agenda = {
+   nombre: "javier",
+   apellido: "juan",
+   ...
+   ...
+}
+
+Ejemplo object constructor:
+
+var agenda1= new Object();
+var agenda2 = new Object();
+
+asignariamos datos así:
+
+agenda1["nombre"] = "Irati";
+agenda2["apellido"] =  "Juan";
+
+o
+
+agenda1.nombre = "Irati";
+agenda1.apellido =  "Juan";
+
+Ejemplo2
+
+var friends = {
+    bill:{},
+    steve:{}
+    
+}
+var friends = new Object();
+friends.bill = new Object();
+friends.steve = new Object();
+
+Mas ejemplos
+
+// Our bob object a constructor this time 
+var bob = new Object();
+bob.name = "Bob Smith";
+bob.age = 30;
+// Here is susan1, in literal notation
+var susan1 = {
+  name: "Susan Jordan",
+  age: 24
+};
+
+--------------
+
+For/in -> el for se mueve por cada entrada del registro del objeto
+
+for (var key in object) {
+  // Access that key's value
+  // with object[key]
+}
+
+Ejemplo
+
+var list = function (objeto) {
+    for (var registro in objeto){
+        console.log (registro);
+    }
+}
+
+
+//Nos movemos
+
+var search = function (busco){
+    for (var x in friends){
+        if (friends[x].firstName == busco){
+            console.log(friends[x])
+            return friends[x];
+        }
+    }
+};
+
+Ejemplo 3
+
+var nyc = {
+    fullName: "New York City",
+    mayor: "Bill de Blasio",
+    population: 8000000,
+    boroughs: 5
+};
+
+// write a for-in loop to print the value of nyc's properties
+
+for (var properties in nyc){
+    console.log(nyc[properties]);
+}
+
+This
+----
+
+This hace referencia al objeto que invoque a la función en el ejemplo de abajo bob
+
+// here we define our method using "this", before we even introduce bob
+var setAge = function (newAge) {
+  this.age = newAge; 
+};
+// now we make bob
+var bob = new Object();
+bob.age = 30;
+bob.setAge = setAge; -> Creamos dentro del objeto bob un método de la funcion setAge
+
+// make susan here, and first give her an age of 25
+var susan = new Object();
+susan.age = 25;
+susan.setAge = setAge; -> Creamos dentro del objeto susan un método de la función setAge
+
+// here, update Susan's age to 35 using the method
+susan.setAge(35); -> Usamos la funcion setAge del objeto susan asignando el valor 35
+
+** ejemplos
+
+function Person(name,age) {
+  this.name = name;
+  this.age = age;
+  this.species = "Homo Sapiens";
+}
+
+var sally = new Person("Sally Bowles",39);
+var holden = new Person("Holden Caulfield",16);
+console.log("sally's species is " + sally.species + " and she is " + sally.age);
+console.log("holden's species is " + holden.species + " and he is " + holden.age);
+
+**
+
+function Rectangle(height, width) {
+  this.height = height;
+  this.width = width;
+  this.calcArea = function() {
+      return this.height * this.width;
+  };
+  // put our perimeter function here!
+  this.calcPerimeter = function(){
+      return (this.height * 2) + (this.width * 2);  
+  };
+}
+
+var rex = new Rectangle(7,3);
+var area = rex.calcArea();
+var perimeter = rex.calcPerimeter();
+
+**
+
+function Rabbit(adjective) {
+    this.adjective = adjective;
+    this.describeMyself = function() {
+        console.log("I am a " + this.adjective + " rabbit");
+    };
+}
+
+// now we can easily make all of our rabbits
+
+var rabbit1 = new Rabbit("fluffy");
+var rabbit2 = new Rabbit("happy");
+var rabbit3 = new Rabbit("sleepy");
+
+rabbit1.describeMyself;
+rabbit2.describeMyself;
+rabbit3.describeMyself;
+
+**
+
+// Our person constructor
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// Now we can make an array of people
+var family = new Array();
+family[0] = new Person("alice", 40);
+family[1] = new Person("bob", 42);
+family[2] = new Person("michelle", 8);
+
+// add the last family member, "timmy", who is 6 years old
+family[3] = new Person("timmy",6);
+
+// loop through our new array
+for (x = 0; x < family.length; x++){
+    console.log(family[x].name);
+}
+
+**
+
+// Our person constructor
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// We can make a function which takes persons as arguments
+// This one computes the difference in ages between two people
+var ageDifference = function(person1, person2) {
+    return person1.age - person2.age;
+}
+
+var alice = new Person("Alice", 30);
+var billy = new Person("Billy", 25);
+
+// get the difference in age between alice and billy using our function
+var diff = ageDifference(alice,billy);
+
+
+**
+
+function Circle (radius) {
+    this.radius = radius;
+    this.area = function () {
+        return Math.PI * this.radius * this.radius;
+        
+    };
+    // define a perimeter method here
+    this.perimeter = function (){
+       return 2 * Math.PI * this.radius  
+    };
+    
+};
+
+Typeof
+------
+
+typeof -> devuelve el tipo de variable que es, lo mejor un ejemplo
+
+var anObj = { job: "I'm an object!" };
+var aNumber = 42;
+var aString = "I'm a string!";
+
+console.log( typeof anObj ); // should print "object"
+console.log( typeof  aNumber ); // should print "number"
+console.log(  typeof aString ); // should print "string"
+
+
+hasOwnProperty
+--------------
+
+Devuelve si un objeto tiene ésa propiedad con true o false, ejemplo:
+
+var myObj = {
+    name: "ceres"    
+};
+
+console.log( myObj.hasOwnProperty('name') ); // should print true
+console.log( myObj.hasOwnProperty('nickname') ); // should print false
+
+
+Prototipos
+----------
+if you want to add a method to a class such that all members of the class can use it,
+we use the following syntax to extend the prototype:
+
+
+className.prototype.newMethod = function() {
+statements;
+};
+
+Ejemplo:
+
+function Dog (breed) {
+  this.breed = breed;
+};
+
+// here we make buddy and teach him how to bark
+
+var buddy = new Dog("golden Retriever");
+Creamos un nuevo método (prototipo) dentro de la clase Dog y así todo clase dog tiene éste nuevo método
+
+Dog.prototype.bark = function() {
+  console.log("Woof");
+};
+
+buddy.bark();
+
+// here we make snoopy
+var snoopy = new Dog("Beagle");
+/// this time it works!
+snoopy.bark();
+
+
+
+Herencia
+--------
+
+Podemos crear un prototipo asignandole una clase, vamos, se le llama herencia. En el ejemplo, creamos una clase Animal
+y despues una clase Penguin, Animal tiene un método llamado sayName creado despues de la instacia (prototipado).
+con Penguin.protoype = new Animal() conseguimos que Penguin herede los métodos y carácteristicas de la clase Animal.
+Creando un objeto tipo "Penguin" vemos que tiene el método sayName heredado!!!
+
+// the original Animal class and sayName method
+function Animal(name, numLegs) {
+    this.name = name;
+    this.numLegs = numLegs;
+}
+Animal.prototype.sayName = function() {
+    console.log("Hi my name is " + this.name);
+};
+
+// define a Penguin class
+function Penguin(name){
+    this.name = name;
+    this.numLegs = 2;
+}
+
+// set its prototype to be a new instance of Animal
+Penguin.prototype = new Animal();
+
+var penguin = new Penguin("Pingu");
+penguin.sayName();
+
+
+*****   Mas ejemplos de herencia de clases
+
+
+// original classes
+function Animal(name, numLegs) {
+    this.name = name;
+    this.numLegs = numLegs;
+    this.isAlive = true;
+}
+function Penguin(name) {
+    this.name = name;
+    this.numLegs = 2
+}
+function Emperor(name) {
+    this.name = name;
+    this.saying = "Waddle waddle";
+}
+
+// set up the prototype chain
+Penguin.prototype = new Animal();
+Emperor.prototype = new Penguin();
+
+var myEmperor = new Emperor("Jules");
+
+console.log( myEmperor.saying ); // should print "Waddle waddle"
+console.log( myEmperor.numLegs ); // should print 2
+console.log( myEmperor.isAlive ); // should print true
+
+
+
+
+Variables privadas en una clase
+-------------------------------
+
+Si dentro de una clase definimos una variable con var, ésta solo puede ser accedida dentro de la clase
+
+function Person(first,last,age) {
+   this.firstname = first;
+   this.lastname = last;
+   this.age = age;
+   var bankBalance = 7500;
+
+bankBalance no puede ser accedida mediante person.bankBalance, daría error como undefined.
+
+
+
+***************************************************************************************
+
+What Are Objects For?
+---------------------
+
+Objects provide us with a way to represent real-world or virtual things. We can do this by storing information
+inside the object's properties. There are two basic ways to make objects:
+
+Literal Notation, where we use
+	var Name = { };
+
+Constructor Notation, where we use the keyword new.
+	var name = new Object();
+
+
+Properties
+----------
+
+Properties are like variables that belong to an object, and are used to hold pieces of information.
+Properties can be accessed in two ways:
+    Dot notation, with ObjectName.PropertyName
+    Bracket notation, with ObjectName["PropertyName"] (don't forget the quotes!)
+
+
+Customizing Constructors
+-------------------------
+
+In addition to the basic Object constructor, we can define our own custom constructors.
+These are helpful for two reasons:
+
+    We can assign our objects properties through parameters we pass in when the object is created.
+
+    We can give our objects methods automatically.
+
+These both work to save us time and lines of code when we make objects.
+
+
+Methods
+--------
+
+Methods are like functions that are associated with a particular object.
+
+They are especially helpful when you want to either:
+
+    Update the object properties
+    Calculate something based on an object's properties.
+
+
+***************************************************************************
+Código completo de ejemplo
+ejemplo de caja registradora que suma parametros en una variable global y 
+aplica descuentos a empleados
+***************************************************************************
+
+function StaffMember(name,discountPercent){
+    this.name = name;
+    this.discountPercent = discountPercent;
+}
+
+var sally = new StaffMember("Sally",5);
+var bob = new StaffMember("Bob",10);
+
+// Create yourself again as 'me' with a staff discount of 20%
+var me = new StaffMember("me",20);
+
+var cashRegister = {
+    total:0,
+    lastTransactionAmount: 0,
+    add: function(itemCost){
+        this.total += (itemCost || 0);
+        this.lastTransactionAmount = itemCost;
+    },
+    scan: function(item,quantity){
+        switch (item){
+        case "eggs": this.add(0.98 * quantity); break;
+        case "milk": this.add(1.23 * quantity); break;
+        case "magazine": this.add(4.99 * quantity); break;
+        case "chocolate": this.add(0.45 * quantity); break;
+        }
+        return true;
+    },
+    voidLastTransaction : function(){
+        this.total -= this.lastTransactionAmount;
+        this.lastTransactionAmount = 0;
+    },
+    // Create a new method applyStaffDiscount here
+    applyStaffDiscount: function(employee){
+        var employee = employee
+        this.total -= (this.total * employee.discountPercent/100)
+    }
+    
+};
+
+cashRegister.scan('eggs',1);
+cashRegister.scan('milk',1);
+cashRegister.scan('magazine',3);
+// Apply your staff discount by passing the 'me' object 
+// to applyStaffDiscount
+cashRegister.applyStaffDiscount(me);
+
+// Show the total bill
+console.log('Your bill is '+cashRegister.total.toFixed(2));
+
+*******************************************
+** Eventos JavaScript asociados a XHTML  **
+*******************************************
+
+Evento 		Descripción 							Elementos para los que está definido
+onblur 		Deseleccionar el elemento 					<button>, <input>, <label>, <select>, <textarea>, <body>
+onchange 	Deseleccionar un elemento que se ha modificado 			<input>, <select>, <textarea>
+onclick 	Pinchar y soltar el ratón 					Todos los elementos
+ondblclick 	Pinchar dos veces seguidas con el ratón 			Todos los elementos
+onfocus 	Seleccionar un elemento 					<button>, <input>, <label>, <select>, <textarea>, <body>
+onkeydown 	Pulsar una tecla (sin soltar) 					Elementos de formulario y <body>
+onkeypress 	Pulsar una tecla 						Elementos de formulario y <body>
+onkeyup 	Soltar una tecla pulsada 					Elementos de formulario y <body>
+onload 		La página se ha cargado completamente 				<body>
+onmousedown 	Pulsar (sin soltar) un botón del ratón 				Todos los elementos
+onmousemove 	Mover el ratón 							Todos los elementos
+onmouseout 	El ratón "sale" del elemento (pasa por encima de otro elemento) Todos los elementos
+onmouseover 	El ratón "entra" en el elemento (pasa por encima del elemento) 	Todos los elementos
+onmouseup 	Soltar el botón que estaba pulsado en el ratón 			Todos los elementos
+onreset 	Inicializar el formulario (borrar todos sus datos) 		<form>
+onresize 	Se ha modificado el tamaño de la ventana del navegador 		<body>
+onselect 	Seleccionar un texto 						<input>, <textarea>
+onsubmit 	Enviar el formulario 						<form>
+onunload 	Se abandona la página (por ejemplo al cerrar el navegador) 	<body>
+
+Ejemplo XHTML
+-------------
+
+<div onclick="alert('Has pinchado con el ratón');" onmouseover="alert('Acabas de pasar el ratón por encima');">
+  Puedes pinchar sobre este elemento o simplemente pasar el ratón por encima
+</div>
+
+
+<body onload="alert('La página se ha cargado completamente');">
+   ...
+</body>
+
+

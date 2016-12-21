@@ -1,0 +1,334 @@
+jQuery
+------
+Syntax:
+
+$(document).ready(); 
+
+It works like this:
+
+    $() says, "hey, jQuery things are about to happen!"
+    Putting document between the parentheses tells us that we're about to work our magic on the HTML document itself.
+    .ready(); is a function, or basic action, in jQuery. It says "hey, I'm going to do stuff as soon as the HTML document is ready!"
+    Whatever goes in .ready()'s parentheses is the jQuery event that occurs as soon as the HTML document is ready.
+
+Example
+
+Cuando la página HTML esté lista se ejecutará la función function()
+
+$(document).ready(function(){
+
+
+});
+
+Podemos coger cualquier elemento del HTML y usarlo:
+
+$('div').slideDown('slow') -> Hace un fadeoff de los elementos div
+$('#cabecera').slideDown('slow') -> Hace un fadeoff de lo elementos que sean del grupo #cabecera
+$('pie').slideDown('slow') -> Hace un fadeoff del elemento HTML cuya ID es pie
+
+
+Action:
+-------
+.ready() -> cuando está listo
+.slideDown()
+.mouseenter() -> el raton pasa por encima
+.mouseleave() -> el ratón sale del elemento
+.fadeTo(velocidad, opacidad) -> Hace un fade en 'x' tiempo a 'y' opacidad
+.hide() -> Esconde el objeto
+.click() -> cuando se hace click
+.fadeIn() -> muestra con fade el elemento
+.slideToggle() -> hace que el objeto se recoja
+.append() -> inserts the specified element as the last child of the target element.
+.prepend() -> inserts the specified element as the first child of the target element.
+.info() ->
+
+
+mas en:http://api.jquery.com/mouseleave/
+
+Ejemplo:
+
+	$(document).ready(function(){
+ 	   $('div').mouseenter(function(){
+  	      $('div').fadeTo('fast',1);   
+  	  });
+  	  $('div').mouseleave(function(){
+  	      $('div').fadeTo('fast',0.5);
+  	  });
+	});
+
+Muestra el panel cuando pinchamos en div
+
+$(document).ready(function(){
+    $('.pull-me').click(function(){
+        $('.panel').slideToggle('slow');
+    });
+});
+
+
+
+
+$p vs $('p')
+------------
+
+You probably noticed that we used both $ and $() in the last exercise:
+
+var $p = $('p');
+
+There's a subtle difference between the two.
+
+$p is just a variable name. There is no magic associated with the $ in $p; 
+it's just a convention for saying, "hey, this variable contains a jQuery object
+." We could call $p anything we want: $paragraph, paragraph, space_cows, whatever! It's just helpful for people reading our code to see $p,
+ since this is a concise way of saying "hey, there's a 'p' jQuery object in here."
+
+$(), on the other hand, is magic. This is the function in disguise that creates jQuery objects. 
+If you're making a jQuery object, you gotta use it!
+
+
+
+.append(), .prepend(), .appendTo()
+----------------------------------
+.append() -> inserts the specified element as the last child of the target element
+		$(".info").append("<p>Stuff!</p>");
+
+.prepend() -> inserts the specified element as the first child of the target element
+		$(".info").prepend("<p>Stuff!</p>");
+
+.appendTo() -> does the same as .append(), but it just reverses the order of "what to add" and "where to add it."
+		$('<p>Stuff!</p>').appendTo('.info');
+
+
+.before(), after()
+------------------
+We can specify where in the DOM we insert an element with the .before() and .after() functions
+	$('target').after('<tag>To add</tag>');
+
+
+
+.empty(), .remove()
+-------------------
+.empty() deletes an element's content and all its descendants
+.remove(), not only deletes an element's content, but deletes the element itself.
+
+
+.toggleClass()
+--------------
+añade o quita una clase, 
+si tiene la clase la quita y si no la tiene la pone (muy buena opción para hacer highlight por ejemplo)
+
+$(document).ready(function(){
+    $('#text').click(function() {
+        $(this).toggleClass('highlighted');
+    });
+});
+
+
+.height() .width()
+------------------
+change the heights and widths of HTML elements. For instance:
+
+	$("div").height("100px");
+	$("div").width("50px");
+
+would give all <div>s on the page a height of 100 pixels and a width of 50 pixels
+
+
+.css()
+------
+takes two inputs: the first is the CSS element to alter, and the second is the value to set it to. 
+	$("div").css("background-color","#008800");
+
+
+
+.html() 
+-------
+.html() can be used to set the contents of the first element match it finds. 
+
+For instance,
+
+	$('div').html();
+
+will get the HTML contents of the first div it finds, and
+
+	$('div').html("I love jQuery!");
+
+will set the contents of the first div it finds to "I love jQuery!"
+
+.val()
+------
+.val() is used to get the value of form elements. For example,
+
+$('input:checkbox:checked').val();
+
+would get the value of the first checked checkbox that jQuery finds.
+
+.on()
+-----
+
+Is a general handler that takes the event, its selector, and an action as inputs. 
+The syntax looks like this:
+
+	$(document).on('event', 'selector', function() {
+    		Do something!
+	});
+
+In this case, 'event' will be 'click', 'selector' will be '.item', and the thing we'll want to do is call 
+.remove() on this.
+
+.hover()
+--------
+The hover() method specifies two functions to run when the mouse pointer hovers over the selected elements.
+This method triggers both the mouseenter and mouseleave events.
+Note: If only one function is specified, it will be run for both the mouseenter and mouseleave events.
+
+$('div').hover(
+    function(){
+      $(this).addClass('highlight');
+   },
+   function(){
+      $(this).removeClass('highlight');
+   }
+);
+
+Al pasar por el div se le asigna la clase highligh (primera funcion) y al salir se le quita (segunda funcion)
+
+.dblclick()
+-----------
+Como su propio nombre indica...
+
+
+.focus()
+--------
+We say an element has focus when we click on it or tab over to it.
+
+
+$(document).ready(function(){
+    $('input').focus(function(){
+        $('input').css('outline-style','solid');--> Al usar Firefox hay que poner el outline-style a solid
+        $('input').css('outline-color','#FF0000');
+    });
+});
+
+
+.keydown()
+----------
+The .keydown() event is triggered whenever a key on the keyboard is pressed. It only works on whatever 
+page element has focus, so you'll need to click on the window containing your div before pressing a key 
+in order for you to see its effects.
+
+.animate()
+----------
+The .animate() effect takes two inputs: the animation to perform, and the time in which to perform the animation. 
+Here's an example:
+
+$(document).ready(function() {
+   $('div').animate({left:'+=10px'},500);
+});
+
+This will take the first div it finds and move it ten pixels to the right. 
+Remember, increasing the distance from the left margin moves something to the right; 
+the += bit is just a shorthand for "take the existing number and add ten to it." 
+In this case, it add ten pixels to the current distance from the left margin.
+
+***************
+** JQuery UI **
+***************
+JQuery UI y es una libreria de efectos para dar mas dinamismo a las web
+Hay que añadir la ruta de la libreria en el documento HTML:
+
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+toda la documentación en: http://jqueryui.com/
+
+
+
+.effect()
+---------
+permite realizar diferentes efectos gráficos:
+
+	.effect('explode'); --> simula explosión
+	.effect('bounce',{times:3},500); --> rebota 3 veces durante 500 milisegundos
+	.effect('slide'); --> efecto slide
+
+.draggable()
+------------
+Permite que un objeto sea pinchado y arrastrado
+
+$('#car').draggable(); --> permitiria al objeto con id 'car' que fuese movible
+
+
+.resizable()
+------------
+Permite hacer que un obejto se lepueda cambiar el tamaño
+
+
+.selectable()
+-------------
+Permite que en una lista se puedan seleccionar los elementos <li> de ella
+	$('ol').selectable();
+
+
+.sortable()
+-----------
+Permite que los elementos <li> de una lista (<ol>) se puedan ordenar pinchando y arrastrandolos
+
+
+.accordion()
+------------
+Hace que desplieges debajo del elemento .accordion() pinchado un panel. (tipica flechita que abre una caja con texto debajo) 
+
+
+
+****************************************************************************************
+***                                                                                  ***
+***                                      Ejemplos                                    ***
+***                                                                                  ***
+****************************************************************************************
+
+// Función que añade divs en una lista y si pinchas en el div los borra
+
+$(document).ready(function(){
+    $('#button').click(function(){
+      var toAdd = $('input[name=checkListItem]').val();
+      $('.list').append('<div class="item">' + toAdd +'</div>');
+    });
+    $(document).on('click','.item',function(){
+        $(this).remove();
+    });
+});
+
+
+
+// Ejemplo que mueve un div
+
+var $paragraph = $("p"); // existing elementv
+$("div").after($paragraph); // Move it!
+
+// Same as:
+$("div").after($("p"));
+
+//mueve un elemento dependiendo de la tecla que se pulse
+
+$(document).ready(function() {
+    $(document).keydown(function(key) {
+        switch(parseInt(key.which,10)) {
+			// Left arrow key pressed
+			case 37:
+				$('img').animate({left: "-=10px"}, 'fast');
+				break;
+			// Up Arrow Pressed
+			case 38:
+			    $('img').animate({top: "-=10px"}, 'fast');
+				break;
+			// Right Arrow Pressed
+			case 39:
+			    $('img').animate({left: "+=10px"},'fast');
+				break;
+			// Down Arrow Pressed
+			case 40:
+			    $('img').animate({top: "+=10px"},'fast');
+				break;
+		}
+	});
+});
+
